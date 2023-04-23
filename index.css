@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #F5F2E7;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    gap: 42px;
+    background-color: #2C3333;
+}
+
+.logo {
+    max-width: 3.3rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    gap: 42px;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: #F5F2E7;
+}
+
+.btn-phone {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 16px;
+    background-color: #F5F2E7;
+    border-radius: 50px;
+    width: 12rem;
+    height: 1.3rem;
+}
+
+.btn-phone:hover {
+    background-color: #2666CF;
+    cursor: pointer;
+}
+
+.btn-phone i {
+    padding-left: 0.5rem;
+}
+
+.btn-phone:hover i {
+    color: #F5F2E7;
+}
+
+.btn-phone p {
+    text-decoration: none;
+    color: #2C3333;
+}
+
+.btn-phone:hover p {
+    text-decoration: none;
+    color: #F5F2E7;
+}
+
+.abrir-menu,
+.cerrar-menu {
+    display: none;
+}
+
+@media screen and (max-width: 550px) {
+
+    .abrir-menu,
+    .cerrar-menu {
+        display: block;
+        border: 0;
+        font-size: 1.25rem;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    .abrir-menu {
+        color: #F5F2E7;
+    }
+
+    .cerrar-menu {
+        color: #F5F2E7;
+    }
+
+    .nav {
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 1rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #2C3333;
+        padding: 2rem;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+    }
+
+    .nav.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        align-items: end;
+    }
+
+    .nav-list li a {
+        color: #F5F2E7;
+    }
+}
