@@ -8,7 +8,7 @@ class Database
         $host = 'localhost';
         $username = 'root';
         $password = '';
-        $database = 'crud_treda';
+        $database = '';
 
         $this->connection = new mysqli($host, $username, $password, $database);
         if ($this->connection->connect_error) {
